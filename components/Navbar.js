@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import Image from 'next/image'
+import { useContext } from 'react'
+import { UserContext } from '@lib/context'
 
 const Navbar = () => {
-  const user = true
-  const username = true
+  const { user, username } = useContext(UserContext)
 
   return (
     <nav className="navbar">
