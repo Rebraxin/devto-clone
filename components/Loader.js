@@ -1,7 +1,6 @@
-const Loader = (props) => {
-  const { show } = props
-
-  return show ? <div className="loader" /> : null
+// Loading Spinner
+const Loader = ({ show }) => {
+  return show ? <div className="loader"></div> : null
 }
 
 export default Loader
