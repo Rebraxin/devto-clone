@@ -153,7 +153,7 @@ const UsernameForm = () => {
   )
 }
 
-const UserNameMessage = ({ username, isValid, loading }) => {
+const UsernameMessage = ({ username, isValid, loading }) => {
   if (username.length < 1) {
     return (
       <p>
