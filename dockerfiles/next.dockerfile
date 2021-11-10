@@ -1,13 +1,15 @@
-FROM node:14-alpine
+FROM node:14
 
-RUN mkdir -p /var/www/html
-WORKDIR /var/www/html
+ENV PORT 3000
 
-COPY app/package*.json /var/www/html
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-RUN yarn
+COPY package*.json /usr/src/app/
 
-COPY app/. /var/www/html
+RUN yarn install
+
+COPY . /usr/src/app
 
 RUN yarn build
 
